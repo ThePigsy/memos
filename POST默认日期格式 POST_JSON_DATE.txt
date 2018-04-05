@@ -1,0 +1,18 @@
+ 
+ @RequestMapping(value = "/test2", method = RequestMethod.POST)
+ public String test2(@RequestBody MyRequestBean myRequestBeane)
+ 
+	public static class MyRequestBean{
+        Date dateStr ;
+        String bizType;
+		...
+	}
+	
+POST http://localhost:8780/admin/api/special/test2
+
+Content-Type	application/json
+
+Body JSON 字符串
+{"dateStr":"2017-10-10T20:00:00.001+0800","bizType":"Groupybuy110test"}
+
+注意 POST JAVA Date 时, 日期格式为: "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

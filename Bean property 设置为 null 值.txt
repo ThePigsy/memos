@@ -1,0 +1,12 @@
+    <bean id="shiroRedisManager" class="org.crazycake.shiro.RedisManager">
+        <property name="host" value="${shiro.redis.host}"/>
+        <property name="port" value="${shiro.redis.port}"/>
+        <property name="password" value="${shiro.redis.password:#{null}}"/>
+        <property name="expire" value="900"/>
+    </bean>
+
+当shiro.redis.password在配置文件中未配置时, 将password属性设置为null值
+
+
+
+源自 https://stackoverflow.com/questions/16735141/specify-default-property-value-as-null-in-spring
